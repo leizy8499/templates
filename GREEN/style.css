@@ -1,0 +1,134 @@
+<style>
+/* fonts go here */
+    @font-face{
+        font-family: porkys;
+        src:url('/assets/porkys.ttf')
+    }
+
+    @font-face{
+        font-family: ;
+        src: url('');
+            
+/* main container elements */
+    body{
+        background: url(/assets/background.jpg);
+        background-size: cover;
+        background-repeat: repeat-y;
+    }
+
+    #container{
+        width: 1000px;
+        margin: 90px auto;
+        display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'directory main'
+                             'misc main';
+        grid-column-gap: 15px;
+        font-size: 1rem;
+        font-family: serif;
+    }
+
+    .misc{ /*hey if you want the margins to look different mess with the padding. :P */
+        grid-area: misc;
+        padding: 10px;
+        border: 10px solid white;
+            border-bottom-left-radius: 25px;
+        overflow:auto;
+        background: white;
+    }
+
+    .directory{
+        grid-area: directory;
+        border: 10px solid white;
+            border-top-left-radius: 25px;
+        font-size: 20px;
+        background: white;
+    }
+        .header{
+            text-align: center;
+            padding: 10px;
+            background: #c4df9b;
+            font-family: porkys;
+                font-size: 20px;
+                letter-spacing: 2px;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            border: 1px ;
+    }
+        .link{
+            text-align: left;
+            padding: 3px;
+                padding-left: 15px;
+            background: linear-gradient(to bottom, #f7f7ec, #d2eab1);
+            border: 1px solid #c4dca4;
+            height: 20px;
+            font-size: 18px;
+    }
+
+    main{
+        grid-area: main;
+        padding: 20px;
+        border: 1px dashed #f7f7ec;
+        display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 150px 50px 1fr;
+            grid-template-areas: 'picture statuscafe'
+                                 'picture buttons'
+                                 'sidebar content';
+        background: white;
+    }
+
+/* "main" elements */
+
+    .picture{
+        grid-area: picture;
+        background-image: url(/assets/3dscartridge.jpg);
+        background-size: cover;
+    }
+    .statuscafe{
+        grid-area: statuscafe;
+        background-image: url(/assets/speechbubble.gif);
+        background-size: 100% 100%;
+        display: grid;
+            grid-template-columns: 300px 250px;
+            grid-template-areas: 'status update';
+    }
+        .updates{
+            grid-area: update;
+            border: 1px solid #c4dca4;
+            width: 210px;
+            margin: 0 auto;
+            height: 155px;
+        }
+
+    .buttons{
+        grid-area: buttons;
+        padding: 15px;
+    }
+    .sidebar{
+        grid-area: sidebar; /* #e6f6c5*/
+            background-color: #d2eab1;
+            background: linear-gradient(to top right, #d2eab1, #d2eab1, #f7f7ec );
+        border-radius: 10px;
+            border: 1px dashed #f7f7ec;
+        padding: 20px;
+    }
+    .content{
+        grid-area: content;
+        padding: 5px;
+        margin-left: 20px;
+    }
+
+/* purely aesthetic-based things */
+    a{text-decoration: none; color: black;}
+    a:hover{font-style: italic;}
+
+    li{list-style-image: url(/assets/li.gif); padding: 5px; margin-left: 20px;}
+
+    .scrollbar-hide{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    textarea{width: 220px; height: 80px;}
+</style>
