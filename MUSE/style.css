@@ -1,0 +1,195 @@
+<style>
+        @font-face{
+            font-family: kosmos;
+            src: url(/assets/plank.ttf);
+        }
+        @font-face{
+            font-family:unispace;
+            src: url(/assets/Unispace.otf);
+        }
+
+        #clef{
+            width: 1600px;
+            height: 850px;
+            margin: 30px auto;
+            display: grid;
+            background-image: url(/assets/ditherclef.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            overflow: hidden;
+        }
+
+        #container{
+            width: 900px;
+            height: 650px;
+            margin: 90px auto;
+
+            display: grid;
+                grid-template-areas: 'music header'
+                                     'main main';
+            grid-template-rows: 130px;
+            grid-template-columns: 280px;
+                grid-row-gap: 10px;
+                grid-column-gap: 20px;
+            border: 0px solid red;
+        }
+
+/* first row */
+        .music{
+            grid-area: music;
+            border: 1px solid black;
+            padding: 10px;
+            box-shadow: 5px 2px 0px black;
+            background: url(/assets/box-bg.png);
+        }
+            .disc{border-radius: 60px; border: 1px solid black; float: left; width: 100px; height: 100px;
+                background-image: url(/assets/fionaCD.jpg); background-size: contain;}
+
+            .musicplayer{float: right; border: 1px solid black; width: 140px; height: 100%; align-content: flex-end; font-family: monospace; background: url(/assets/albumcover.jpg); 
+                         background-size: cover; filter: grayscale(100%); position: relative;}
+                .musicplayer:hover{filter: grayscale(0); transition: 0.5s}
+
+        .header{
+            grid-area: header;
+            border: 1px solid black;
+            padding-right: 20px;
+            align-content:flex-end;
+            text-align: right;
+                text-shadow: 3px 3px 1px white;
+                font-size: 30px;
+                font-family: kosmos;
+            box-shadow: 5px 2px 0px black;
+            background: linear-gradient(to bottom right, black, transparent), url(/assets/keyboard.jpg);
+                background-size: contain;
+
+        }
+
+/* second row */
+        main{
+            margin: 0 auto;
+            grid-area: main;
+
+            width: 900px;
+            height: 490px;
+
+            display: grid;
+            grid-template-areas: 'nav marquee'
+                                 'sidebar content';
+            grid-template-rows: 50px;
+            grid-template-columns: 220px;
+            background: white;
+        }
+
+        .nav{
+            grid-area: nav;
+            background: linear-gradient(to right,  transparent, grey, black);
+                background-size: cover;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+            padding: 10px;
+            text-shadow: 1px 1px white;
+                font-family: kosmos;
+                font-size: 22px;
+        }
+            .nav::after{
+                grid-area: nav;
+                content: "";
+                border-top: 49px solid black;
+                    border-left: 0px solid transparent;
+                    border-right: 54px solid transparent;
+                position: relative;
+                    top: 39px;
+                    left: 157px;
+        }
+
+        .marquee{
+            grid-area: marquee;
+            border: 1px solid black;
+                border-bottom: 1px solid grey;
+            padding: 15px;
+            font-family: monospace;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            border: 1px solid black;
+            border-top: 0px;
+                border-right: 1px solid grey;
+            background: white;
+            padding: 20px;
+            font-family: monospace;
+        }
+            .mininav{
+                border: 1px solid black;
+                height: px;
+                border-top: 0;
+                font-size: 10px;
+            }
+
+        .content{
+            grid-area: content;
+            border: 1px solid black;
+                border-left: 0;
+                border-top: 0;
+            background: lightgrey;
+            box-shadow: 5px 5px 0px black;
+            font-size: 10px;
+                font-family: monospace;
+            padding: 20px;
+
+            display: grid;
+                grid-template-columns: 180px 1fr;
+                grid-template-rows: 290px 1fr;
+                grid-template-areas: 'about conMain'
+                                     'status conMain';
+                grid-gap: 10px;
+            max-height: 400px;
+        }
+            .about{
+                grid-area: about;
+                border: 1px solid black;
+                padding: 10px;
+                background: white;
+        }
+            .status{
+                grid-area: status;
+                border: 1px solid black;
+                padding: 10px;
+                background: white;
+        }
+            .conMain{
+                grid-area: conMain;
+                border: 1px solid black;
+                padding: 10px;
+                background: white;
+                overflow: auto;
+                font-size: 12px;
+        }
+
+        footer{font-size: 10px; font-family: monospace;}
+
+        .rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+        button{width: 100%; border-radius: 0px; border: 0; text-align: left; padding-right: 7px; font-family: monospace; font-size: 10px; background: white;}
+        button:hover{font-style: italic; background: linear-gradient(to right, white, white, lightgrey, black)}
+
+        a{color: black;}
+        a:hover{color: grey; text-decoration: dotted underline;}
+
+        h1{font-family: kosmos; letter-spacing: 1px; text-align: right;}
+
+        .scrollbar-hide{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    </style>
