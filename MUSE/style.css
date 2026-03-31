@@ -1,11 +1,11 @@
 <style>
         @font-face{
-            font-family: kosmos;
+            font-family: plank;
             src: url(/assets/plank.ttf);
         }
         @font-face{
-            font-family:unispace;
-            src: url(/assets/Unispace.otf);
+            font-family:;
+            src: url('');
         }
 
         #clef{
@@ -57,7 +57,7 @@
             text-align: right;
                 text-shadow: 3px 3px 1px white;
                 font-size: 30px;
-                font-family: kosmos;
+                font-family: plank;
             box-shadow: 5px 2px 0px black;
             background: linear-gradient(to bottom right, black, transparent), url(/assets/keyboard.jpg);
                 background-size: contain;
@@ -88,7 +88,7 @@
             border-top: 1px solid black;
             padding: 10px;
             text-shadow: 1px 1px white;
-                font-family: kosmos;
+                font-family: plank;
                 font-size: 22px;
         }
             .nav::after{
@@ -186,7 +186,7 @@
         a{color: black;}
         a:hover{color: grey; text-decoration: dotted underline;}
 
-        h1{font-family: kosmos; letter-spacing: 1px; text-align: right;}
+        h1{font-family: plank; letter-spacing: 1px; text-align: right;}
 
         .scrollbar-hide{
         -ms-overflow-style: none;
